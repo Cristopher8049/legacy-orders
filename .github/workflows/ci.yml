@@ -1,4 +1,4 @@
-name: CI
+name: CI - Node.js Test
 
 on:
   push:
@@ -8,18 +8,23 @@ on:
     branches:
       - develop
 
+permissions:
+  contents: read
+
 jobs:
   test:
+    name: Run tests and package app
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Setup Node.js 20
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
-          node-version: "20"
+          node-version: 20
+          cache: npm
 
       - name: Install dependencies
         run: |
@@ -35,11 +40,14 @@ jobs:
       - name: Package application
         if: success()
         run: |
-          tar -czf app-package.tar.gz . --exclude=.git --exclude=node_modules
+          tar -czf /tmp/legacy-app.tar.gz . \
+            --exclude=.git \
+            --exclude=node_modules \
+            --exclude=legacy-app.tar.gz
 
       - name: Upload artifact
         if: success()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
-          name: app-package
-          path: app-package.tar.gz
+          name: legacy-app-package
+          path: /tmp/legacy-app.tar.gz
