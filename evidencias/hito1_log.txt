@@ -1,0 +1,218 @@
+2026-05-26T22:26:55.2660418Z Current runner version: '2.334.0'
+2026-05-26T22:26:55.2683267Z ##[group]Runner Image Provisioner
+2026-05-26T22:26:55.2684099Z Hosted Compute Agent
+2026-05-26T22:26:55.2684560Z Version: 20260213.493
+2026-05-26T22:26:55.2685108Z Commit: 5c115507f6dd24b8de37d8bbe0bb4509d0cc0fa3
+2026-05-26T22:26:55.2685758Z Build Date: 2026-02-13T00:28:41Z
+2026-05-26T22:26:55.2686355Z Worker ID: {79c38fcf-fef8-46b0-99d3-7df88fcaf2a4}
+2026-05-26T22:26:55.2686975Z Azure Region: centralus
+2026-05-26T22:26:55.2687480Z ##[endgroup]
+2026-05-26T22:26:55.2688803Z ##[group]Operating System
+2026-05-26T22:26:55.2689340Z Ubuntu
+2026-05-26T22:26:55.2689811Z 24.04.4
+2026-05-26T22:26:55.2690191Z LTS
+2026-05-26T22:26:55.2690603Z ##[endgroup]
+2026-05-26T22:26:55.2691021Z ##[group]Runner Image
+2026-05-26T22:26:55.2691524Z Image: ubuntu-24.04
+2026-05-26T22:26:55.2692056Z Version: 20260518.149.1
+2026-05-26T22:26:55.2693285Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260518.149/images/ubuntu/Ubuntu2404-Readme.md
+2026-05-26T22:26:55.2694555Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260518.149
+2026-05-26T22:26:55.2695364Z ##[endgroup]
+2026-05-26T22:26:55.2696268Z ##[group]GITHUB_TOKEN Permissions
+2026-05-26T22:26:55.2698086Z Contents: read
+2026-05-26T22:26:55.2698536Z Metadata: read
+2026-05-26T22:26:55.2699859Z ##[endgroup]
+2026-05-26T22:26:55.2702459Z Secret source: Actions
+2026-05-26T22:26:55.2703764Z Prepare workflow directory
+2026-05-26T22:26:55.3024336Z Prepare all required actions
+2026-05-26T22:26:55.3061379Z Getting action download info
+2026-05-26T22:26:55.7125956Z Download action repository 'actions/checkout@v6' (SHA:de0fac2e4500dabe0009e67214ff5f5447ce83dd)
+2026-05-26T22:26:55.8004749Z Download action repository 'actions/setup-node@v6' (SHA:48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e)
+2026-05-26T22:26:55.8724366Z Download action repository 'actions/upload-artifact@v6' (SHA:b7c566a772e6b6bfb58ed0dc250532a479d7789f)
+2026-05-26T22:26:56.0449486Z Complete job name: Run tests and package app
+2026-05-26T22:26:56.1108336Z ##[group]Run actions/checkout@v6
+2026-05-26T22:26:56.1109237Z with:
+2026-05-26T22:26:56.1109770Z   repository: Cristopher8049/legacy-orders
+2026-05-26T22:26:56.1110708Z   token: ***
+2026-05-26T22:26:56.1111203Z   ssh-strict: true
+2026-05-26T22:26:56.1111673Z   ssh-user: git
+2026-05-26T22:26:56.1112239Z   persist-credentials: true
+2026-05-26T22:26:56.1112798Z   clean: true
+2026-05-26T22:26:56.1113423Z   sparse-checkout-cone-mode: true
+2026-05-26T22:26:56.1114043Z   fetch-depth: 1
+2026-05-26T22:26:56.1114513Z   fetch-tags: false
+2026-05-26T22:26:56.1115055Z   show-progress: true
+2026-05-26T22:26:56.1115550Z   lfs: false
+2026-05-26T22:26:56.1116052Z   submodules: false
+2026-05-26T22:26:56.1116537Z   set-safe-directory: true
+2026-05-26T22:26:56.1117403Z ##[endgroup]
+2026-05-26T22:26:56.2251316Z Syncing repository: Cristopher8049/legacy-orders
+2026-05-26T22:26:56.2255242Z ##[group]Getting Git version info
+2026-05-26T22:26:56.2256965Z Working directory is '/home/runner/work/legacy-orders/legacy-orders'
+2026-05-26T22:26:56.2259454Z [command]/usr/bin/git version
+2026-05-26T22:26:56.2260535Z git version 2.54.0
+2026-05-26T22:26:56.2263909Z ##[endgroup]
+2026-05-26T22:26:56.2271289Z Temporarily overriding HOME='/home/runner/work/_temp/456c1cc2-f436-4824-967a-ba5187c5bf6a' before making global git config changes
+2026-05-26T22:26:56.2273034Z Adding repository directory to the temporary git global config as a safe directory
+2026-05-26T22:26:56.2274249Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/legacy-orders/legacy-orders
+2026-05-26T22:26:56.2276078Z Deleting the contents of '/home/runner/work/legacy-orders/legacy-orders'
+2026-05-26T22:26:56.2278044Z ##[group]Initializing the repository
+2026-05-26T22:26:56.2279668Z [command]/usr/bin/git init /home/runner/work/legacy-orders/legacy-orders
+2026-05-26T22:26:56.2360106Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-05-26T22:26:56.2361227Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-05-26T22:26:56.2363525Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-05-26T22:26:56.2365098Z hint: call:
+2026-05-26T22:26:56.2366255Z hint:
+2026-05-26T22:26:56.2367348Z hint: 	git config --global init.defaultBranch <name>
+2026-05-26T22:26:56.2368573Z hint:
+2026-05-26T22:26:56.2369713Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-05-26T22:26:56.2371545Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-05-26T22:26:56.2373553Z hint:
+2026-05-26T22:26:56.2374419Z hint: 	git branch -m <name>
+2026-05-26T22:26:56.2375373Z hint:
+2026-05-26T22:26:56.2376627Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-05-26T22:26:56.2378806Z Initialized empty Git repository in /home/runner/work/legacy-orders/legacy-orders/.git/
+2026-05-26T22:26:56.2382268Z [command]/usr/bin/git remote add origin https://github.com/Cristopher8049/legacy-orders
+2026-05-26T22:26:56.2421344Z ##[endgroup]
+2026-05-26T22:26:56.2423078Z ##[group]Disabling automatic garbage collection
+2026-05-26T22:26:56.2425751Z [command]/usr/bin/git config --local gc.auto 0
+2026-05-26T22:26:56.2454739Z ##[endgroup]
+2026-05-26T22:26:56.2456324Z ##[group]Setting up auth
+2026-05-26T22:26:56.2457730Z Removing SSH command configuration
+2026-05-26T22:26:56.2464075Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-05-26T22:26:56.2497696Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-05-26T22:26:56.2809095Z Removing HTTP extra header
+2026-05-26T22:26:56.2815712Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-05-26T22:26:56.2846036Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-05-26T22:26:56.3034111Z Removing includeIf entries pointing to credentials config files
+2026-05-26T22:26:56.3041134Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-05-26T22:26:56.3070982Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-05-26T22:26:56.3261888Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-a154d34a-0d2d-40e8-9b5a-ca9cb79766e8.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-05-26T22:26:56.3299758Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/legacy-orders/legacy-orders/.git.path /home/runner/work/_temp/git-credentials-a154d34a-0d2d-40e8-9b5a-ca9cb79766e8.config
+2026-05-26T22:26:56.3328453Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/legacy-orders/legacy-orders/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-a154d34a-0d2d-40e8-9b5a-ca9cb79766e8.config
+2026-05-26T22:26:56.3361096Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-a154d34a-0d2d-40e8-9b5a-ca9cb79766e8.config
+2026-05-26T22:26:56.3385955Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-a154d34a-0d2d-40e8-9b5a-ca9cb79766e8.config
+2026-05-26T22:26:56.3409412Z ##[endgroup]
+2026-05-26T22:26:56.3410143Z ##[group]Fetching the repository
+2026-05-26T22:26:56.3418145Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +8b6d07a7aa510edc987f851937cf1a70cd4ac620:refs/remotes/origin/develop
+2026-05-26T22:26:56.6264176Z From https://github.com/Cristopher8049/legacy-orders
+2026-05-26T22:26:56.6266009Z  * [new ref]         8b6d07a7aa510edc987f851937cf1a70cd4ac620 -> origin/develop
+2026-05-26T22:26:56.6297606Z [command]/usr/bin/git branch --list --remote origin/develop
+2026-05-26T22:26:56.6320133Z   origin/develop
+2026-05-26T22:26:56.6328249Z [command]/usr/bin/git rev-parse refs/remotes/origin/develop
+2026-05-26T22:26:56.6345705Z 8b6d07a7aa510edc987f851937cf1a70cd4ac620
+2026-05-26T22:26:56.6349214Z ##[endgroup]
+2026-05-26T22:26:56.6350829Z ##[group]Determining the checkout info
+2026-05-26T22:26:56.6352650Z ##[endgroup]
+2026-05-26T22:26:56.6355615Z [command]/usr/bin/git sparse-checkout disable
+2026-05-26T22:26:56.6389690Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-05-26T22:26:56.6411319Z ##[group]Checking out the ref
+2026-05-26T22:26:56.6414386Z [command]/usr/bin/git checkout --progress --force -B develop refs/remotes/origin/develop
+2026-05-26T22:26:56.6449525Z Switched to a new branch 'develop'
+2026-05-26T22:26:56.6450588Z branch 'develop' set up to track 'origin/develop'.
+2026-05-26T22:26:56.6454884Z ##[endgroup]
+2026-05-26T22:26:56.6488605Z [command]/usr/bin/git log -1 --format=%H
+2026-05-26T22:26:56.6506439Z 8b6d07a7aa510edc987f851937cf1a70cd4ac620
+2026-05-26T22:26:56.6748188Z ##[group]Run actions/setup-node@v6
+2026-05-26T22:26:56.6748727Z with:
+2026-05-26T22:26:56.6749113Z   node-version: 20
+2026-05-26T22:26:56.6749532Z   package-manager-cache: false
+2026-05-26T22:26:56.6750012Z   check-latest: false
+2026-05-26T22:26:56.6750622Z   token: ***
+2026-05-26T22:26:56.6751011Z ##[endgroup]
+2026-05-26T22:26:56.8252494Z Attempting to download 20...
+2026-05-26T22:26:57.5727066Z Acquiring 20.20.2 - x64 from https://github.com/actions/node-versions/releases/download/20.20.2-23521894959/node-20.20.2-linux-x64.tar.gz
+2026-05-26T22:26:58.0799371Z Extracting ...
+2026-05-26T22:26:58.0908503Z [command]/usr/bin/tar xz --strip 1 --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/b3dae8aa-ce68-4655-8044-bb4e63ecd995 -f /home/runner/work/_temp/1dec2102-297a-4926-8b15-b26a05acca94
+2026-05-26T22:26:59.0446956Z Adding to the cache ...
+2026-05-26T22:27:00.2542474Z ##[group]Environment details
+2026-05-26T22:27:00.4771736Z node: v20.20.2
+2026-05-26T22:27:00.4772240Z npm: 10.8.2
+2026-05-26T22:27:00.4772500Z yarn: 1.22.22
+2026-05-26T22:27:00.4773611Z ##[endgroup]
+2026-05-26T22:27:00.4916651Z ##[group]Run if [ -f package-lock.json ]; then
+2026-05-26T22:27:00.4917072Z [36;1mif [ -f package-lock.json ]; then[0m
+2026-05-26T22:27:00.4917328Z [36;1m  npm ci[0m
+2026-05-26T22:27:00.4917504Z [36;1melse[0m
+2026-05-26T22:27:00.4917705Z [36;1m  npm install[0m
+2026-05-26T22:27:00.4917918Z [36;1mfi[0m
+2026-05-26T22:27:00.4945424Z shell: /usr/bin/bash -e {0}
+2026-05-26T22:27:00.4945719Z ##[endgroup]
+2026-05-26T22:27:02.5900914Z 
+2026-05-26T22:27:02.5909023Z added 68 packages, and audited 69 packages in 2s
+2026-05-26T22:27:02.5909437Z 
+2026-05-26T22:27:02.5909653Z 15 packages are looking for funding
+2026-05-26T22:27:02.5909972Z   run `npm fund` for details
+2026-05-26T22:27:02.5912985Z 
+2026-05-26T22:27:02.5913170Z found 0 vulnerabilities
+2026-05-26T22:27:02.6005539Z ##[group]Run npm test
+2026-05-26T22:27:02.6005824Z [36;1mnpm test[0m
+2026-05-26T22:27:02.6026989Z shell: /usr/bin/bash -e {0}
+2026-05-26T22:27:02.6027250Z ##[endgroup]
+2026-05-26T22:27:02.7026611Z 
+2026-05-26T22:27:02.7027275Z > legacy-orders@1.0.0 test
+2026-05-26T22:27:02.7027664Z > node test/app.test.js
+2026-05-26T22:27:02.7027834Z 
+2026-05-26T22:27:02.7300632Z === Ejecutando Pruebas Unitarias de Pedidos ===
+2026-05-26T22:27:03.7325618Z ✅ PASSED: Simulación de pasarela de órdenes y despacho aprobada.
+2026-05-26T22:27:03.7403644Z ##[group]Run tar --exclude=.git \
+2026-05-26T22:27:03.7403967Z [36;1mtar --exclude=.git \[0m
+2026-05-26T22:27:03.7404225Z [36;1m    --exclude=node_modules \[0m
+2026-05-26T22:27:03.7404486Z [36;1m    --exclude=legacy-app.tar.gz \[0m
+2026-05-26T22:27:03.7404771Z [36;1m    -czf /tmp/legacy-app.tar.gz .[0m
+2026-05-26T22:27:03.7424250Z shell: /usr/bin/bash -e {0}
+2026-05-26T22:27:03.7424497Z ##[endgroup]
+2026-05-26T22:27:03.7543264Z ##[group]Run actions/upload-artifact@v6
+2026-05-26T22:27:03.7543531Z with:
+2026-05-26T22:27:03.7543933Z   name: legacy-app-package
+2026-05-26T22:27:03.7544164Z   path: /tmp/legacy-app.tar.gz
+2026-05-26T22:27:03.7544388Z   if-no-files-found: warn
+2026-05-26T22:27:03.7544594Z   compression-level: 6
+2026-05-26T22:27:03.7544789Z   overwrite: false
+2026-05-26T22:27:03.7544978Z   include-hidden-files: false
+2026-05-26T22:27:03.7545193Z ##[endgroup]
+2026-05-26T22:27:03.9077220Z With the provided path, there will be 1 file uploaded
+2026-05-26T22:27:03.9081291Z Artifact name is valid!
+2026-05-26T22:27:03.9082154Z Root directory input is valid!
+2026-05-26T22:27:04.0791391Z Beginning upload of artifact content to blob storage
+2026-05-26T22:27:04.2845213Z Uploaded bytes 9217
+2026-05-26T22:27:04.3338705Z Finished uploading artifact content to blob storage!
+2026-05-26T22:27:04.3339757Z SHA256 digest of uploaded artifact zip is 65547ea0bc68d67125109204b9f6361bc7dfbbd68feae073e966a76586ff6742
+2026-05-26T22:27:04.3340634Z Finalizing artifact upload
+2026-05-26T22:27:04.5720236Z Artifact legacy-app-package.zip successfully finalized. Artifact ID 7227558852
+2026-05-26T22:27:04.5721662Z Artifact legacy-app-package has been successfully uploaded! Final size is 9217 bytes. Artifact ID is 7227558852
+2026-05-26T22:27:04.5724654Z Artifact download URL: https://github.com/Cristopher8049/legacy-orders/actions/runs/26478714199/artifacts/7227558852
+2026-05-26T22:27:04.5838278Z Post job cleanup.
+2026-05-26T22:27:04.7113623Z Post job cleanup.
+2026-05-26T22:27:04.7942202Z [command]/usr/bin/git version
+2026-05-26T22:27:04.7976669Z git version 2.54.0
+2026-05-26T22:27:04.8013355Z Temporarily overriding HOME='/home/runner/work/_temp/6364268b-fdc5-44fd-8f53-839e544e612d' before making global git config changes
+2026-05-26T22:27:04.8014794Z Adding repository directory to the temporary git global config as a safe directory
+2026-05-26T22:27:04.8019358Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/legacy-orders/legacy-orders
+2026-05-26T22:27:04.8046167Z Removing SSH command configuration
+2026-05-26T22:27:04.8052269Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-05-26T22:27:04.8085546Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-05-26T22:27:04.8261779Z Removing HTTP extra header
+2026-05-26T22:27:04.8266820Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-05-26T22:27:04.8296440Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-05-26T22:27:04.8473212Z Removing includeIf entries pointing to credentials config files
+2026-05-26T22:27:04.8480545Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-05-26T22:27:04.8506556Z includeif.gitdir:/home/runner/work/legacy-orders/legacy-orders/.git.path
+2026-05-26T22:27:04.8507737Z includeif.gitdir:/home/runner/work/legacy-orders/legacy-orders/.git/worktrees/*.path
+2026-05-26T22:27:04.8508601Z includeif.gitdir:/github/workspace/.git.path
+2026-05-26T22:27:04.8509226Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-05-26T22:27:04.8516971Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/legacy-orders/legacy-orders/.git.path
+2026-05-26T22:27:04.8536320Z /home/runner/work/_temp/git-credentials-a154d34a-0d2d-40e8-9b5a-ca9cb79766e8.config
+2026-05-26T22:27:04.8546190Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/legacy-orders/legacy-orders/.git.path /home/runner/work/_temp/git-credentials-a154d34a-0d2d-40e8-9b5a-ca9cb79766e8.config
+2026-05-26T22:27:04.8575006Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/legacy-orders/legacy-orders/.git/worktrees/*.path
+2026-05-26T22:27:04.8593581Z /home/runner/work/_temp/git-credentials-a154d34a-0d2d-40e8-9b5a-ca9cb79766e8.config
+2026-05-26T22:27:04.8602747Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/legacy-orders/legacy-orders/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-a154d34a-0d2d-40e8-9b5a-ca9cb79766e8.config
+2026-05-26T22:27:04.8628847Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+2026-05-26T22:27:04.8647948Z /github/runner_temp/git-credentials-a154d34a-0d2d-40e8-9b5a-ca9cb79766e8.config
+2026-05-26T22:27:04.8654692Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-a154d34a-0d2d-40e8-9b5a-ca9cb79766e8.config
+2026-05-26T22:27:04.8680582Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-05-26T22:27:04.8698276Z /github/runner_temp/git-credentials-a154d34a-0d2d-40e8-9b5a-ca9cb79766e8.config
+2026-05-26T22:27:04.8706708Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-a154d34a-0d2d-40e8-9b5a-ca9cb79766e8.config
+2026-05-26T22:27:04.8734879Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-05-26T22:27:04.8916154Z Removing credentials config '/home/runner/work/_temp/git-credentials-a154d34a-0d2d-40e8-9b5a-ca9cb79766e8.config'
+2026-05-26T22:27:04.9057423Z Cleaning up orphan processes
