@@ -40,10 +40,10 @@ jobs:
       - name: Package application
         if: success()
         run: |
-          tar -czf /tmp/legacy-app.tar.gz . \
-            --exclude=.git \
-            --exclude=node_modules \
-            --exclude=legacy-app.tar.gz
+          tar --exclude=.git \
+              --exclude=node_modules \
+              --exclude=legacy-app.tar.gz \
+              -czf /tmp/legacy-app.tar.gz .
 
       - name: Upload artifact
         if: success()
